@@ -1,5 +1,6 @@
 # Interpretable Dimension Reduction
 This is a try to make a non-linear dimension reduction that is easier to interpret.
+Full paper: https://arxiv.org/abs/2504.17601
 
 ## Basic theory
 n number of gaussian functions are created. The centers($\mu$) are sampled among the data points. Each gaussian function is assigned a linear transformation, T: ℝ<sup>d<sub>1</sub></sup> → ℝ<sup>d<sub>2</sub></sup>, where d<sub>2</sub><d<sub>1</sub>. The gaussian functions are weights for each linear transformation.
