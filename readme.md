@@ -69,7 +69,7 @@ dr.get_dimension_influence()
 
 array([[0.3997428 ],[0.25298584],[0.34727138]], dtype=float32)
 <br><br>
-Supports this. Now equipped with this knowledge, we can plot the reduction with the original Y-axis as color. As one can do with all dimension reduction techniques. Let's also add the influence of the Y-axis in the background. This is done by calculating the transformation over a mesh:
+Supports this. Now equipped with this knowledge, we can plot the reduction with the original Y-axis as color, As one can do with all dimension reduction techniques. Let's also add the influence of the Y-axis in the background. This is done by calculating the transformation over a mesh. This is done by approximating the transformation at each point by distance to the gaussian centers in reduced space. The exact transformation is just known at the gaussian centers, one can plot these instead of the mesh grid, but it provides a worse visualization. 
 <br>
 
  ```python

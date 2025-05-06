@@ -179,7 +179,7 @@ class DimReduction():
         meshgrid = tf.stack(grid, axis=-1)
         positions = tf.reshape(meshgrid, [-1, self.dim2])
 
-        matrix_weights = get_matrix_weights(positions, self.get_dim_reduct_gaussian_centers(), self.model.layers[2].weights[0])
+        matrix_weights = get_matrix_weights(positions, self.get_dim_reduct_gaussian_centers(), self.model.layers[2].weights[0]) #approximation from distance in reduced space
         w = tf.einsum('jkl,ij->ijkl', self.model.layers[2].weights[1], matrix_weights)
         w = tf.math.reduce_sum(w, axis=[1])
         return w.numpy(), positions
